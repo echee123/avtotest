@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class test123 {
+public class testNaydi {
     @Test
     void successfulSearchTest() {
         Configuration.pageLoadStrategy = "eager";
