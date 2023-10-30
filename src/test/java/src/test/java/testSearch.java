@@ -1,14 +1,19 @@
 package src.test.java;
 
 import com.codeborne.selenide.Configuration;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class testNaydi {
-    @Test
+public class testSearch {
+    @BeforeAll
+    static void settings() {
+        Configuration.browserSize ="1920x1080";
+    }
+    @Test //авторизация
     void successfulSearchTest() {
         Configuration.pageLoadStrategy = "eager";
         open("https://test.core.brew4ru.net/CAWA/signin");
@@ -18,7 +23,7 @@ public class testNaydi {
         $(".user-name").shouldHave(text("tsanw01"));
 }
 
-    @Test
+    @Test //неправильный пароль
     void pass() {
         Configuration.pageLoadStrategy = "eager";
         open("https://test.core.brew4ru.net/CAWA/signin");
