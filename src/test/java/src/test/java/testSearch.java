@@ -12,6 +12,7 @@ public class testSearch {
     @BeforeAll
     static void settings() {
         Configuration.browserSize ="1920x1080";
+        Configuration.holdBrowserOpen =true;
     }
     @Test //авторизация
     void successfulSearchTest() {
@@ -25,7 +26,6 @@ public class testSearch {
 
     @Test //неправильный пароль
     void pass() {
-        Configuration.pageLoadStrategy = "eager";
         open("https://test.core.brew4ru.net/CAWA/signin");
         $("[placeholder=Логин]").setValue("tsanw01");
         $("[placeholder=Пароль]").setValue("qqqqqqqq");
