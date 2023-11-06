@@ -7,12 +7,15 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-
 public class testSearch {
+    
+
     @BeforeAll
     static void settings() {
         Configuration.browserSize ="1920x1080";
         Configuration.holdBrowserOpen =true;
+
+
     }
     @Test //авторизация
     void successfulSearchTest() {
