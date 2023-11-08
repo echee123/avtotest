@@ -1,6 +1,8 @@
 package src.test.java;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -13,6 +15,7 @@ public class TestSearch {
     static void settings() {
         Configuration.browserSize ="1920x1080";
         Configuration.holdBrowserOpen =true;
+        SelenideLogger.addListener("allure", new AllureSelenide());
 
 
     }
@@ -24,7 +27,6 @@ public class TestSearch {
         $("[placeholder=Пароль]").setValue("Tim!1234");
         $(".btn-wrap").click();
         $(".user-name").shouldHave(text("tsanw01"));
-        sleep(5000);
 }
 
     @Test //неправильный пароль
@@ -34,7 +36,6 @@ public class TestSearch {
         $("[placeholder=Пароль]").setValue("qqqqqqqq");
         $(".btn-wrap").click();
         $(".title-wrap").shouldHave(text("Авторизация"));
-        sleep(5000);
     }
 
 }
