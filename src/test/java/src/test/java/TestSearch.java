@@ -5,10 +5,9 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
-public class testSearch {
-    
+import static com.codeborne.selenide.Selenide.*;
+
+public class TestSearch {
 
     @BeforeAll
     static void settings() {
@@ -25,6 +24,7 @@ public class testSearch {
         $("[placeholder=Пароль]").setValue("Tim!1234");
         $(".btn-wrap").click();
         $(".user-name").shouldHave(text("tsanw01"));
+        sleep(5000);
 }
 
     @Test //неправильный пароль
@@ -34,5 +34,7 @@ public class testSearch {
         $("[placeholder=Пароль]").setValue("qqqqqqqq");
         $(".btn-wrap").click();
         $(".title-wrap").shouldHave(text("Авторизация"));
+        sleep(5000);
     }
+
 }
