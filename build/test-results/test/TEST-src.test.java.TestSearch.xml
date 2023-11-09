@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="src.test.java.TestSearch" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-11-08T21:33:48" hostname="DESKTOP-PMCF954" time="6.486">
+<testsuite name="src.test.java.TestSearch" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-11-09T06:23:53" hostname="DESKTOP-PMCF954" time="6.165">
   <properties/>
-  <testcase name="successfulSearchTest()" classname="src.test.java.TestSearch" time="6.261"/>
-  <testcase name="pass()" classname="src.test.java.TestSearch" time="0.223"/>
+  <testcase name="successfulSearchTest()" classname="src.test.java.TestSearch" time="5.903"/>
+  <testcase name="pass()" classname="src.test.java.TestSearch" time="0.26"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[нояб. 09, 2023 12:33:50 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 118, so returning the closest version found: 115
+  <system-err><![CDATA[нояб. 09, 2023 9:23:55 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 119, so returning the closest version found: 115
 ]]></system-err>
 </testsuite>

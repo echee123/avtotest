@@ -37,5 +37,4 @@ public class TestSearch {
         $(".btn-wrap").click();
         $(".title-wrap").shouldHave(text("Авторизация"));
     }
-/////
 }
